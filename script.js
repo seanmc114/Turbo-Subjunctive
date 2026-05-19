@@ -409,6 +409,7 @@ document.getElementById("submit").addEventListener("click", () => {
   const savedBest    = localStorage.getItem(bestTimeKey);
   if (!savedBest || totalTime < parseInt(savedBest)) {
     localStorage.setItem(bestTimeKey, totalTime);
+    showArcadeCode('subjunctive', totalTime);
   }
 
   // Unlock next level?
